@@ -1,5 +1,5 @@
 # HKUIButton
-#### HK UIButton Enchancements
+#### HK UIButton Enhancements
 
 ## IMPORTANT!! ##
 
