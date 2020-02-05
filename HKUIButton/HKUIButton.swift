@@ -25,18 +25,19 @@
 ///  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ///  SOFTWARE.
 
-//  Version: 1.0.0
+//  Version: 1.0.1
 //
 //  Version History
 //  -----------------------------------------------------------------
-//  1.0.0     - 2020/01/18  initial release
-//                          - auto corning rounding
-//                          - auto font resizing
+//  1.0.0     2020/01/18  initial release
+//                        - auto corning rounding
+//                        - auto font resizing
+//  1.0.1     2020/02/05  Minor bug fix
 
 //  Dependencies
 //  -----------------------------------------------------------------
 //  HKLengthSizeCalculationBasis    >= 1.0.0
-//  UIView+HKAutoCornerRounding
+//  HKUIViewAutoCornerExtension     >= 1.0.0
 
 //  Note:
 // ---------------------------------------------------------------
@@ -504,7 +505,8 @@ import HKUIViewLengthCalculationBasis
                 titleLabel?.font = titleLabel?.font.withSize(longerEdgeLength() / autoSizeTitleFontFactor)
 
             case .constant:
-                layer.cornerRadius = autoCornerRoundingConstant()
+                // do nothing
+                break
             }
         }
     }
