@@ -46,7 +46,9 @@ Allows you to dynamically calculate the font size base on one of the followings:
 
 This is useful for labels that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
 
-<img src="./docs/iphone.png" alt="iPhone screenshot"> <img src="./docs/ipad.jpg" alt="iPad screenshot">
+The following examples show how this work. The top button has dynamic corner radius and dynamic font scaling turned on and the bottom button does not. The first screen is an iPhone, the second screen is an iPad. As you can see, the fixed sizes do not look right on the second screen.
+
+<img src="./docs/iPhone.png" alt="iPhone screenshot" width="267" height="142"> <img src="./docs/iPad.jpg" alt="iPad screenshot" width="277" height="140">
 
 ### Border Customization
 It also let users customize the border width, color and alpha value for both normal, highlighted and disabled states.
