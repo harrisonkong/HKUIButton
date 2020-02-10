@@ -10,6 +10,8 @@
 
 1.0.0 - 2020/01/18 - Initial release
 
+1.0.1 - 2020/02/05 - Minor bug fixes
+
 ## MINIMUM REQUIREMENTS ##
 
 **Swift** 4.0 or above
@@ -34,7 +36,7 @@ Allows you to dynamically calculate the corner radius base on one of the followi
 This is useful for labels that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
 
 ### Border Customization
-It also let users customize the border width, color and alpha value for both normal and highlighted states.
+It also let users customize the border width, color and alpha value for both normal, highlighted and disabled states.
 
 <img src="./docs/cloudline.png" alt="---line---">
 
@@ -140,12 +142,20 @@ Note that you might need to wait for the design time code to compile after setti
   - the 4th attribute is **Corner Radius Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
   
   - The 8th, 9th and 10th attributes are **Border Color**, **Border Alpha**, and **Border Width**. Which are self explanatory.
+  
+  - The 11th, 12th, 13th and 14th attribute are **Normal Bkg**, **Normal Bkg Alpha**, **Normal Text**, **Normal Text Alpha**. Which are the normal background color, normal background alpha, normal text color and normal text alpha, respectively.
 
 <img src="./docs/Attribute-Inspector-2.png" alt="attribute inspector pane screenshot">
 
   - The 15th, 16th, 17th, and 18th attributes are **Hilite Bd Color**, **Hilite Bd Alpha**, and **Hilite Bd Width**. Which are the highlighted border color, hightlighted border alpha, and hightlighted border width, respectively.
   
-  - The 11th and 12th attributes are **Hilite Bkg** and **Hilite Bkg Alpha**. Which are the hightlighted background color and hightlighted alpha, respectively.
+  - The 19th, 20th and 21st attributes are **Hilite Bkg**, **Hilite Bkg Alpha**, **Hilite Text**. Which are the hightlighted background color, hightlighted alpha, and highlighted text color, respectively.
+  
+  - The 22nd - 24th attributes are **Disabled Bd Color**, **Disabled Bd Alpha**, and **Disabled Bd Width**. Which are the disabled border color, disabled border alpha, and disabled border width, respectively.
+  
+  - The 25th and 26th attributes are **Disabled Bkg** and **Disabled Bkg Alpha**. Which are the disabled background color and disabled background alpha, respectively.
+  
+  - The 27th and 28th attributes are **Disabled Text** and **Disabled Text Alpha**. Which are the disabled text color and disabled text alpha, respectively.
     
 3. Of course, the immediate appearance of the label might differ from the one at runtime if the label size changes.
 
