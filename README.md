@@ -194,26 +194,48 @@ Note that you might need to wait for the design time code to compile after setti
 Create an instance of the class and then set the attributes (see Interface Builder above for explanations of the attributes)
 
 ```
-let myImageView = HKUIImageView()
+let myButton = HKUIButton()
 
-myImageView.autoCornerRounding = true
-myImageView.roundingBasis = .height
-myImageView.cornerRadiusConstant = 0.0  // not used here, only used if roundingBasis is .constant
-myImageView.cornerRadiusFactor = 24.0
+myButton.autoCornerRounding = true
+myButton.roundingBasis = .height
+myButton.cornerRadiusConstant = 0.0  // not used here, only used if roundingBasis is .constant
+myButton.cornerRadiusFactor = 24.0
 
-myImageView.borderColor = UIColor.red
-myImageView.borderAlpha = 1.0
-myImageView.borderWidth = 5.0
+myButton.autoSizeTitleFont = true
+myButton.titleFontBasis = .height
+myButton.autoSizeTitleFontFactor = 2.7
 
-myImageView.hiliteBdColor = UIColor.yellow
-myImageView.hiliteBdAlpha = 1.0
-myImageView.hiliteBdWidth = 5.0
+myButton.borderColor = UIColor.red
+myButton.borderAlpha = 1.0
+myButton.borderWidth = 5.0
 
-myImageView.hiliteBkg = UIColor.blue
-myImageView.hiliteBkgAlpha = 0.5
+myButton.normalBkg = UIColor.yellow
+myButton.normalBkgAlpha = 1.0
+myButton.normalText = UIColor.blue
+myButton.normalTextAlpha = 1.0
+
+myButton.hiliteBdColor = UIColor.yellow
+myButton.hiliteBdAlpha = 1.0
+myButton.hiliteBdWidth = 5.0
+
+myButton.hiliteBkg = UIColor.blue
+myButton.hiliteBkgAlpha = 0.5
+
+myButton.hiliteText = UIColor.yellow
+myButton.hiliteTextAlpha = 1.0
+
+myButton.disabledBdColor = UIColor.gray
+myButton.disabledBdAlpha = 0.5
+myButton.disabledBdWidth = 5.0
+
+myButton.disabledBkgColor = UIColor.black
+myButton.disabledBkgAlpha = 0.7
+myButton.disabledText = UIColor.gray
+myButton.disabledTextAlpha = 0.7
+
 ```
 
-Note that the second attribute `roundingBasis` is an enumeration type that is declared in `UIView+LengthCalculationBasis.swift` as follow:
+Note that the attributes `roundingBasis` and `titleFontBasis` are of enumeration type that is declared in `UIView+LengthCalculationBasis.swift` as follow:
 
 ```
 @objc public enum LengthCalculationBasis: Int {
