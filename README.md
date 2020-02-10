@@ -44,7 +44,7 @@ Use one of the following methods:
 
 ### 1. Using CocoaPod ###
 
-The module is avabilable via CocoaPods Trunk. Below is an example podfile. If you already use a podfile for your project, all you have to do is add the line that specifies `HKUIImageView`. The other dependencies will also be automatically installed in the xcworkspace.
+The module is avabilable via CocoaPods Trunk. Below is an example podfile. If you already use a podfile for your project, all you have to do is add the line that specifies `HKUIButton`. The other dependencies will also be automatically installed in the xcworkspace.
 
 ```
 platform :ios, '11.0'
@@ -53,7 +53,7 @@ target 'MyTarget' do
 
   use_frameworks!
 
-  pod 'HKUIImageView', '~> 1.0.0'
+  pod 'HKUIButton', '~> 1.0.0'
   # other pods for your project
 
 end
@@ -104,7 +104,7 @@ import HKUIImageView
 You can also simply include the following source files in your project:
 
 ```
-HKUIImageView.swift
+HKUIButton.swift
 UIView+HKAutoCornerRounding.swift
 UIView+LengthCalculationBasis.swift
 ```
@@ -121,9 +121,9 @@ UIView+LengthCalculationBasis.swift
 
 Note that you might need to wait for the design time code to compile after setting the class.
 
-2. There will be 12 inspectable variables at the *Attribute Inspector* pane:
+2. There will be 28 inspectable variables at the *Attribute Inspector* pane:
 
-<img src="./docs/Attribute-Inspector.png" alt="attribute inspector pane screenshot">
+<img src="./docs/Attribute-Inspector-1.png" alt="attribute inspector pane screenshot">
 
   - the 1st one **Auto Corner Rounding** is an on/off switch to control whether automatic corner radius calculation will be enabled.
   - the 2nd attribute **Corner Rounding Basis** is an integer that corresponds to the following:
@@ -139,9 +139,11 @@ Note that you might need to wait for the design time code to compile after setti
   - the 3rd atrribute is **Corner Radius Constant** which is a CGFloat. This is only used if the previous attribute is 5 (constant).
   - the 4th attribute is **Corner Radius Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
   
-  - The 5th, 6th and 7th attributes are **Border Color**, **Border Alpha**, and **Border Width**. Which are self explanatory.
+  - The 8th, 9th and 10th attributes are **Border Color**, **Border Alpha**, and **Border Width**. Which are self explanatory.
 
-  - The 8th, 9th and 10th attributes are **Hilite Bd Color**, **Hilite Bd Alpha**, and **Hilite Bd Width**. Which are the highlighted border color, hightlighted border alpha, and hightlighted border width, respectively.
+<img src="./docs/Attribute-Inspector-2.png" alt="attribute inspector pane screenshot">
+
+  - The 15th, 16th, 17th, and 18th attributes are **Hilite Bd Color**, **Hilite Bd Alpha**, and **Hilite Bd Width**. Which are the highlighted border color, hightlighted border alpha, and hightlighted border width, respectively.
   
   - The 11th and 12th attributes are **Hilite Bkg** and **Hilite Bkg Alpha**. Which are the hightlighted background color and hightlighted alpha, respectively.
     
