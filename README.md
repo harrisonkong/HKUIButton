@@ -21,7 +21,7 @@
 <img src="./docs/cloudline.png" alt="---line---">
 
 ## WHAT IS IT? ##
-`HKUIImageView` enhances the functionality of UIView by providing these additional features:
+`HKUIButton` enhances the functionality of UIButton by providing these additional features:
 
 ### Dynamic Corner Radius 
 Allows you to dynamically calculate the corner radius base on one of the followings:
@@ -34,6 +34,19 @@ Allows you to dynamically calculate the corner radius base on one of the followi
 - Or, it can also be set to a constant
 
 This is useful for labels that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
+
+### Dynamic Font Scaling ###
+
+Allows you to dynamically calculate the font size base on one of the followings:
+
+- the width of the label
+- the height of the label
+- the length of the shorter edge of the label (width or height)
+- the length of the longer edge of the label (width or height)
+
+This is useful for labels that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
+
+<img src="./docs/iphone.png" alt="iPhone screenshot"> <img src="./docs/ipad.jpg" alt="iPad screenshot">
 
 ### Border Customization
 It also let users customize the border width, color and alpha value for both normal, highlighted and disabled states.
@@ -138,8 +151,23 @@ Note that you might need to wait for the design time code to compile after setti
         
         If this is set to any number less than 1, it will be assumed to be 1
         If this is set to any number greater than 5, it will be assumed to be 5
+        
   - the 3rd atrribute is **Corner Radius Constant** which is a CGFloat. This is only used if the previous attribute is 5 (constant).
   - the 4th attribute is **Corner Radius Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
+  
+  - The 5th attribute is **Auto Size Title Font**. is an on/off switch to control whether dynamic font sizing will be enabled.
+  
+  - The 6th attribute **Auto Size Title Font Basis** is an integer that corresponds to the following:
+  
+        1 = width of the label
+        2 = height of the label
+        3 = shorter edge (width or height) of the label
+        4 = longer edge (width of height) of the label
+        
+        If this is set to any number less than 1, it will be assumed to be 1
+        If this is set to any number greater than 4, it will be assumed to be 4
+
+  - the 7th attribute is **Auto Size Title Font Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
   
   - The 8th, 9th and 10th attributes are **Border Color**, **Border Alpha**, and **Border Width**. Which are self explanatory.
   
