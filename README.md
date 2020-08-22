@@ -132,7 +132,7 @@ UIView+LengthCalculationBasis.swift
 
 ### Interface Builder ###
 
-1. Drop a UIImageView in your view controller then change the class in the *Identity Inspector* pane to HKUIImageView like this:
+1. Drop a UIButton in your view controller then change the class in the *Identity Inspector* pane to HKUIButton like this:
 
 <img src="./docs/Identity-Inspector.png" alt="identity inspector pane screenshot">
 
