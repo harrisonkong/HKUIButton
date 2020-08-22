@@ -1,5 +1,5 @@
 # <img src="./docs/logo256.jpg" width="40" height="40" alt="skyRoute66 logo" style="vertical-align:middle"> HKUIButton # 
-![Swift](https://img.shields.io/static/v1?label=Swift&message=4.0%20or%20above&color=%23FF4400&style=plastic) ![iOS](https://img.shields.io/static/v1?label=iOS&&message=11.0%20or%20above&color=yellow&style=plastic) ![Cocoapods](https://img.shields.io/cocoapods/v/HKUIButton?label=pod&color=brightgreen&style=plastic) ![Cocoapods](https://img.shields.io/cocoapods/l/HKUIButton?color=blue&style=plastic) ![Category](https://img.shields.io/static/v1?label=category&message=User%20Interface&color=blueviolet&style=plastic) 
+![Swift](https://img.shields.io/static/v1?button=Swift&message=4.0%20or%20above&color=%23FF4400&style=plastic) ![iOS](https://img.shields.io/static/v1?button=iOS&&message=11.0%20or%20above&color=yellow&style=plastic) ![Cocoapods](https://img.shields.io/cocoapods/v/HKUIButton?button=pod&color=brightgreen&style=plastic) ![Cocoapods](https://img.shields.io/cocoapods/l/HKUIButton?color=blue&style=plastic) ![Category](https://img.shields.io/static/v1?button=category&message=User%20Interface&color=blueviolet&style=plastic) 
 #### Harrison Kong's Enhanced UIButton ####
 
 <img src="./docs/HKUIButton.png" alt="HKUIButton screenshot">
@@ -26,25 +26,25 @@
 ### Dynamic Corner Radius 
 Allows you to dynamically calculate the corner radius base on one of the followings:
 
-- the width of the label
-- the height of the label
-- the length of the shorter edge of the label (width or height)
-- the length of the longer edge of the label (width or height)
+- the width of the button
+- the height of the button
+- the length of the shorter edge of the button (width or height)
+- the length of the longer edge of the button (width or height)
 
 - Or, it can also be set to a constant
 
-This is useful for labels that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
+This is useful for buttons that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
 
 ### Dynamic Font Scaling ###
 
 Allows you to dynamically calculate the font size base on one of the followings:
 
-- the width of the label
-- the height of the label
-- the length of the shorter edge of the label (width or height)
-- the length of the longer edge of the label (width or height)
+- the width of the button
+- the height of the button
+- the length of the shorter edge of the button (width or height)
+- the length of the longer edge of the button (width or height)
 
-This is useful for labels that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
+This is useful for buttons that change size (e.g. device rotation) or for catering to screen sizes of different devices (e.g., iPhone vs. iPad)
 
 The following examples show how this work. The top button has dynamic corner radius and dynamic font scaling turned on and the bottom button does not. The first screen is an iPhone, the second screen is an iPad. As you can see, the fixed sizes do not look right on the second screen.
 
@@ -145,31 +145,31 @@ Note that you might need to wait for the design time code to compile after setti
   - the 1st one **Auto Corner Rounding** is an on/off switch to control whether automatic corner radius calculation will be enabled.
   - the 2nd attribute **Corner Rounding Basis** is an integer that corresponds to the following:
 
-        1 = width of the label
-        2 = height of the label
-        3 = shorter edge (width or height) of the label
-        4 = longer edge (width of height) of the label
+        1 = width of the button
+        2 = height of the button
+        3 = shorter edge (width or height) of the button
+        4 = longer edge (width of height) of the button
         5 = no calculation, set to a constant
         
         If this is set to any number less than 1, it will be assumed to be 1
         If this is set to any number greater than 5, it will be assumed to be 5
         
   - the 3rd atrribute is **Corner Radius Constant** which is a CGFloat. This is only used if the previous attribute is 5 (constant).
-  - the 4th attribute is **Corner Radius Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
+  - the 4th attribute is **Corner Radius Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the button divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
   
   - The 5th attribute is **Auto Size Title Font**. is an on/off switch to control whether dynamic font sizing will be enabled.
   
   - The 6th attribute **Auto Size Title Font Basis** is an integer that corresponds to the following:
   
-        1 = width of the label
-        2 = height of the label
-        3 = shorter edge (width or height) of the label
-        4 = longer edge (width of height) of the label
+        1 = width of the button
+        2 = height of the button
+        3 = shorter edge (width or height) of the button
+        4 = longer edge (width of height) of the button
         
         If this is set to any number less than 1, it will be assumed to be 1
         If this is set to any number greater than 4, it will be assumed to be 4
 
-  - the 7th attribute is **Auto Size Title Font Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the label divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
+  - the 7th attribute is **Auto Size Title Font Factor** which is a CGFloat that is used to divide the chosen length in the 2nd attribute to be set as the font size. For example, if this is set to 24 and the previous attribute is 2 = height, the font size will be set to the height of the button divided by 24. Experiment to get the desired result. This attribute is not used if the 2nd attribute is set to 5 (constant).
   
   - The 8th, 9th and 10th attributes are **Border Color**, **Border Alpha**, and **Border Width**. Which are self explanatory.
   
@@ -187,7 +187,7 @@ Note that you might need to wait for the design time code to compile after setti
   
   - The 27th and 28th attributes are **Disabled Text** and **Disabled Text Alpha**. Which are the disabled text color and disabled text alpha, respectively.
     
-3. Of course, the immediate appearance of the label might differ from the one at runtime if the label size changes.
+3. Of course, the immediate appearance of the button might differ from the one at runtime if the button size changes.
 
 ### Programmatically ###
 
