@@ -11,6 +11,8 @@
 1.0.0 - 2020/01/18 - Initial release
 
 1.0.1 - 2020/02/05 - Minor bug fixes
+        
+2020/08/23 - Documentation corrections (no code changes)
 
 ## MINIMUM REQUIREMENTS ##
 
@@ -113,7 +115,7 @@ end
 Don't forget to import the module in your source code:
 
 ```
-import HKUIImageView
+import HKUIButton
 ```
 
 ### 2. BY INCLUDING THE SOURCE FILES ###
@@ -134,11 +136,19 @@ UIView+LengthCalculationBasis.swift
 
 1. Drop a UIButton in your view controller then change the class in the *Identity Inspector* pane to HKUIButton like this:
 
-
+<img src="./docs/Identity-Inspector.png" alt="identity inspector pane screenshot">
 
 Note that you might need to wait for the design time code to compile after setting the class.
 
-2. There will be 28 inspectable variables at the *Attribute Inspector* pane:
+#### ***** IMPORTANT!! ***** ####
+
+2. You must set the Button Type to Custom in the *Attribute Inspector* pane or the button will not render correctly:
+
+<img src="./docs/Button-Type-1.png" alt="attributes inspector pane screenshot"> <img src="./docs/Button-Type-2.png" alt="attributes inspector pane screenshot">
+
+3. As with any UI elements, you must also ensure that your button is properly constrainted or it might disappear when it is tapped.
+
+4. There will be 28 inspectable variables at the *Attribute Inspector* pane:
 
 <img src="./docs/Attribute-Inspector-1.png" alt="attribute inspector pane screenshot">
 
@@ -187,7 +197,7 @@ Note that you might need to wait for the design time code to compile after setti
   
   - The 27th and 28th attributes are **Disabled Text** and **Disabled Text Alpha**. Which are the disabled text color and disabled text alpha, respectively.
     
-3. Of course, the immediate appearance of the button might differ from the one at runtime if the button size changes.
+5. Of course, the immediate appearance of the button might differ from the one at runtime if the button size changes.
 
 ### Programmatically ###
 
